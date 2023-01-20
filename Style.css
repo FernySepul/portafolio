@@ -1,42 +1,45 @@
 :root {
-  --color-background: #f9f7f7;
+  --color-background: #f9f7f9;
   --color-primary: #000;
   --color-secondary: #ffb718;
 }
-html,
-body {
+*{
   box-sizing: border-box;
+  background-color: var(--color-background);
+  font-family: 'Inter', sans-serif;
 }
-.nav-bar ul {
+
+header{
+  display:flex;
+  justify-content: center;
+}
+.nav-bar{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
   padding: 0px;
-  gap: 32px;
-  isolation: isolate;
-
-  width: 864px;
-  height: 64px;
+  width: 60%;
+  height: 4rem;
   border-bottom: 4px dashed var(--color-secondary);
+  background-color: var(--color-background);
+  position: fixed;
+  top: 0;
 }
-.language {
-  position: absolute;
-  width: 109px;
-  height: 39px;
-  left: 0px;
-  top: 12.5px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
-
+.nav-bar ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 0px 1rem;
+}
+.nav-bar a{
+  text-decoration: none;
   color: var(--color-primary);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  z-index: 2;
+  font-size: 1.5rem;
+  transition: all 0.5s ease 0s;
 }
-/*TODO: poner estilo al navbar*/
+.nav-bar a:hover{
+  color: var(--color-secondary);
+}
+.main, .footer{
+  padding: 3rem 20%;
+  
+}
