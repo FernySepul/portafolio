@@ -1,0 +1,42 @@
+:root {
+  --color-background: #f9f7f7;
+  --color-primary: #000;
+  --color-secondary: #ffb718;
+}
+html,
+body {
+  box-sizing: border-box;
+}
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+  isolation: isolate;
+
+  width: 864px;
+  height: 64px;
+  border-bottom: 4px dashed var(--color-secondary);
+}
+.language {
+  position: absolute;
+  width: 109px;
+  height: 39px;
+  left: 0px;
+  top: 12.5px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: var(--color-primary);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 2;
+}
+/*TODO: poner estilo al navbar*/
