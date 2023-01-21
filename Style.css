@@ -3,17 +3,17 @@
   --color-primary: #000;
   --color-secondary: #ffb718;
 }
-*{
+* {
   box-sizing: border-box;
   background-color: var(--color-background);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-header{
-  display:flex;
+header {
+  display: flex;
   justify-content: center;
 }
-.nav-bar{
+.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,21 +25,21 @@ header{
   position: fixed;
   top: 0;
 }
-.nav-bar ul li{
+.nav-bar ul li {
   list-style: none;
   display: inline-block;
   padding: 0px 1rem;
 }
-.nav-bar a{
+.nav-bar a {
   text-decoration: none;
   color: var(--color-primary);
   font-size: 1.5rem;
   transition: all 0.5s ease 0s;
 }
-.nav-bar a:hover{
+.nav-bar a:hover {
   color: var(--color-secondary);
 }
-.main, .footer{
+.main,
+.footer {
   padding: 3rem 20%;
-  
 }
