@@ -1,0 +1,83 @@
+h1 {
+  font-size: 3rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+.cards {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  width: 672px;
+  height: 480px;
+  padding: 0px;
+  gap: 2rem;
+}
+ul li {
+  list-style: none;
+}
+ul a {
+  text-decoration: none;
+}
+.container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 8rem;
+  padding: 1rem;
+  border-radius: 16px;
+}
+.container-card:hover {
+  cursor: pointer;
+}
+.container-card img {
+  width: 3rem;
+  height: 3rem;
+}
+.container-card p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+}
+.instagram {
+  background: linear-gradient(
+    100.59deg,
+    #405de6 -12.28%,
+    #5b51d8 3.09%,
+    #833ab4 16.68%,
+    #c13584 31.45%,
+    #e1306c 46.23%,
+    #fd1d1d 59.82%,
+    #f56040 72.82%,
+    #f77737 83.46%,
+    #fcaf45 95.87%,
+    #ffdc80 101.19%
+  );
+}
+.github {
+  background-color: #000000;
+}
+.whatsapp {
+  background-color: #25d366;
+}
+.discord {
+  background-color: #7289da;
+}
+.email,
+.email p {
+  background-color: #d3d3d3;
+  color: #000000;
+}
+.linkedin {
+  background-color: #0e76a8;
+}
