@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 h1 {
   font-size: 3rem;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -33,6 +42,7 @@ ul a {
   height: 8rem;
   padding: 1rem;
   border-radius: 16px;
+  transition: all 0.4s ease 0s;
 }
 .container-card:hover {
   cursor: pointer;
@@ -41,8 +51,11 @@ ul a {
   width: 3rem;
   height: 3rem;
 }
+.container-card:hover .icon {
+  animation: rotate 1.5s ease-in-out;
+}
 .container-card p {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -65,7 +78,7 @@ ul a {
   );
 }
 .github {
-  background-color: #000000;
+  background-color: #222222;
 }
 .whatsapp {
   background-color: #25d366;

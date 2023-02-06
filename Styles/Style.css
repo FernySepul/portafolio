@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
 :root {
   --color-background: #f9f7f9;
   --color-background-box: #eeeeee;
   --color-background-hover: #cecece;
-  --color-primary: #000;
+  --color-font: #000;
   --color-secondary: #ffb718;
+  --color-img-profile: #fefefe;
+  --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 *,
 ::after,
@@ -13,39 +17,8 @@
 body {
   background-color: var(--color-background);
   font-family: "Inter", sans-serif;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-}
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px;
-  width: 60%;
-  height: 4rem;
-  border-bottom: 4px dashed var(--color-secondary);
-  background-color: var(--color-background);
-  position: fixed;
-  top: 0;
-}
-.nav-bar ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 0px 1rem;
-}
-.nav-bar a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  transition: all 0.4s ease 0s;
-  padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
-}
-.nav-bar a:hover {
-  background-color: var(--color-background-hover);
+  font-weight: 400;
+  color: var(--color-font);
 }
 .main {
   margin: 0 auto;
@@ -57,6 +30,7 @@ header {
   margin: 0 auto;
   max-width: 60%;
 }
+/* index.html style */
 .biography {
   display: flex;
   flex-direction: row;
@@ -68,12 +42,12 @@ header {
 .biography img {
   margin-top: 2rem;
   max-height: 240px;
-  outline: 8px solid #fffefe;
+  outline: 8px solid var(--color-img-profile);
   outline-offset: -8px;
   border-radius: 100%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow);
 }
-
+/* projects style */
 .container-projects {
   display: flex;
   flex-direction: row;
@@ -100,5 +74,42 @@ header {
   width: 80%;
   height: 80%;
 }
-
+/* agrega tema oscuro si el usuario lo tiene predeterminado */
+@media (prefers-color-scheme: dark) {
+  /* paleta de colores */
+  :root {
+    --color-background: #121212;
+    --color-background-box: #222222;
+    --color-background-hover: #121212;
+    --color-font: #efefef;
+    --color-secondary: #0b6625;
+    --color-img-profile: #444444;
+    --shadow-hover: 0px 0px 16px rgba(255, 255, 255, 0.5);
+  }
+  * {
+    font-weight: 300;
+  }
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+  /*nav-bar */
+  .nav-bar {
+    background-color: var(--color-background-box);
+  }
+  .nav-bar a:hover {
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-hover);
+  }
+  /* hover project box */
+  .box-project:hover {
+    box-shadow: var(--shadow-hover);
+  }
+  /* contact cards */
+  .container-card:hover {
+    box-shadow: var(--shadow-hover);
+  }
+  .github:hover {
+    background-color: var(--color-background);
+  }
+}
 /*:TODO HACER 767px responsive*/
